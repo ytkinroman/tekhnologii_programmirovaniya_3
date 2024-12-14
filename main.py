@@ -6,39 +6,6 @@ from multiprocessing import Process
 from threading import Thread
 
 
-"""
-
-Практическая работа "Параллельные вычисления"
-
-В данной практической работе студент более наглядно сможет увидеть преимущества параллельных вычислений на примере реального пэт проекта.
-
-Что необходимо для практической работы:
-1. Интерес
-2. Средства запуска Python
-3. Подборка видео с YouTube, которые студент хочет сохранить себе на компьютер
-
-Этапы выполнения практической работы:
-1. Скачать репозиторий с github
-2. Установить зависимости проекта requirements.txt
-3. Ознакомиться с кодом
-4. Перейти в метод main() и заполнить картёж youtube_urls строками, которые содержат ссылки на видео, которое студент хочет скачать, например: 
-    # Список коротких видео с котиками (Shots).
-    # В рамках практической работы рекомендую использовать видео длительностью около минуты.
-    youtube_urls = ('https://youtu.be/cS2vYtDq8l4?si=tFQWjb1gXrB0-ici'
-                    'https://youtu.be/SfmFOvVMc-o?si=GY_OsGJryPTPk54N',
-                    'https://youtu.be/_gKhXrDDYBM?si=pf4bJJDOiRcoPIyt',
-                    ...)
-                    
-6. Запустить последовательный метод sequential_download() в основном методе main(), передав в него список коротких видео youtube_urls.
-Зафиксировать время выполнения программы и потребляемую память. После фиксации данных закомментировать метод sequential_download().
-7. Запустить параллельный метод, который работает на процессах parallel_download() в основном методе main(), передав в него список коротких видео youtube_urls.
-Зафиксировать время выполнения программы и потребляемую память. После фиксации данных закомментировать метод parallel_download().
-8. Самостоятельно реализовать метод parallel_download_thread(), который работает последовательно на потоках.
-Зафиксировать время выполнения программы и потребляемую память.
-9. Сделать вывод об использовании последовательного и параллельных вычислений в практическом проекте.
-"""
-
-
 def get_memory_usage() -> float:
     """Получение используемой памяти в мегабайтах."""
     process = psutil.Process(os.getpid())
@@ -92,27 +59,18 @@ def parallel_download_thread(youtube_urls: tuple) -> None:
     print("=" * 72)
     print("[ИНФОРМАЦИЯ] Начинается параллельное скачивание видео с использованием потоков.")
 
-    threads = []
-
-    for url in youtube_urls:
-        thread = Thread(target=video_downloader, args=(url,))
-        threads.append(thread)
-        thread.start()
-
-    for thread in threads:
-        thread.join()
+    # Тут писать код.
+    # ...
 
     print("[ИНФОРМАЦИЯ] Все видео успешно скачаны.")
 
 
 def main() -> None:
-    youtube_urls = ('https://youtu.be/cS2vYtDq8l4?si=tFQWjb1gXrB0-ici',
-                    'https://youtu.be/SfmFOvVMc-o?si=GY_OsGJryPTPk54N',
-                    'https://youtu.be/_gKhXrDDYBM?si=pf4bJJDOiRcoPIyt')
+    youtube_urls = ()
 
-    # sequential_download(youtube_urls)
-    # parallel_download(youtube_urls)
-    parallel_download_thread(youtube_urls)
+    sequential_download()
+    # parallel_download()
+    # parallel_download_thread()
 
 
 def app() -> None:

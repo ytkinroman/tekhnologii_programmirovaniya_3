@@ -67,8 +67,13 @@ def parallel_download_thread(youtube_urls: tuple) -> None:
 def main() -> None:
     youtube_urls = ()
 
+    # Последовательное выполнение.
     sequential_download()
+    
+    # Процессы.
     # parallel_download()
+    
+    # Потоки.
     # parallel_download_thread()
 
 

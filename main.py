@@ -42,7 +42,6 @@ def parallel_download(youtube_urls: tuple) -> None:
     print("[ИНФОРМАЦИЯ] Начинается параллельное скачивание видео с использованием процессов.")
 
     processes = []
-
     for url in youtube_urls:
         process = Process(target=video_downloader, args=(url,))
         processes.append(process)

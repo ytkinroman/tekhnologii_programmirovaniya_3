@@ -123,27 +123,20 @@ def parallel_download(youtube_urls: tuple) -> None:
     print("=" * 72)
     print("[ИНФОРМАЦИЯ] Начинается параллельное скачивание видео с использованием процессов.")
 
-    processes = []
-
-    for url in youtube_urls:
-        process = Process(target=start_parallel, args=(url,))
-        processes.append(process)
-        process.start()
-
-    for process in processes:
-        process.join()
+    ...
 
     print("[ИНФОРМАЦИЯ] Все видео успешно скачаны.")
 
 
 def main() -> None:
     youtube_urls = (
-        "https://youtu.be/cS2vYtDq8l4?si=tFQWjb1gXrB0-ici",
-        "https://youtu.be/SfmFOvVMc-o?si=GY_OsGJryPTPk54N",
-        "https://youtu.be/_gKhXrDDYBM?si=pf4bJJDOiRcoPIyt"
+        "https://youtu.be/...",
+        "https://youtu.be/...",
+        "https://youtu.be/...",
+        ...
     )
-    # sequential_download(youtube_urls)
-    parallel_download(youtube_urls)
+    # sequential_download()
+    # parallel_download()
 
 
 def app() -> None:

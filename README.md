@@ -6,7 +6,7 @@
 
 Проект представляет собой простое приложение, которое может скачивать плейлист видео с платформы YouTube и перевести на иностранный язык (в работе будем переводить с русского на английский).
 
-Эталонное решение спрятал [тут](https://github.com/ytkinroman/tekhnologii_programmirovaniya_3/tree/perfect_solution).
+*Эталонное решение спрятал [тут](https://github.com/ytkinroman/tekhnologii_programmirovaniya_3/tree/perfect_solution).*
 
 
 ## Что необходимо для практической работы:

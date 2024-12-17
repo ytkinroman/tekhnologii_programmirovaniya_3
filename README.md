@@ -31,8 +31,7 @@ pip install -r requirements.txt
 # Список коротких видео с котиками (Shots):
 youtube_urls = ("https://youtu.be/cS2vYtDq8l4?si=tFQWjb1gXrB0-ici"
                 "https://youtu.be/SfmFOvVMc-o?si=GY_OsGJryPTPk54N",
-                "https://youtu.be/_gKhXrDDYBM?si=pf4bJJDOiRcoPIyt",
-                ...)
+                "https://youtu.be/_gKhXrDDYBM?si=pf4bJJDOiRcoPIyt")
 ```
    
 6. Запустить последовательный метод sequential_download() в основном методе main(), передав в него список видео youtube_urls. Зафиксировать время выполнения программы и потребляемую память. После фиксации данных закомментировать метод sequential_download().
